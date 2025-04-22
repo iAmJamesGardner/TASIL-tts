@@ -4,11 +4,20 @@
 $script:i = 0
 $script:Key = $env:SPEECH_KEY
 $script:Region = $env:SPEECH_REGION
+$script:voicesUri = "https://$script:Region.tts.speech.microsoft.com/cognitiveservices/voices/list"
 $script:TokenEndpoint = "https://$script:Region.api.cognitive.microsoft.com/sts/v1.0/issueToken"
 $script:TTSEndpoint = "https://$script:Region.tts.speech.microsoft.com/cognitiveservices/v1"
+$script:getVoiceHeaders = @{
+    "Ocp-Apim-Subscription-Key" = $script:key
+}
 $script:CommonHeaders = @{
     'Content-Type'             = 'application/ssml+xml'
     'X-Microsoft-OutputFormat' = 'audio-16khz-128kbitrate-mono-mp3'
+}
+
+function Get-SpeechVoices($name) {
+    $results = Invoke-RestMethod -Uri $script:voicesUri -Headers $script:getVoiceHeaders -Method Get
+    if ($name) { ($results | ? { $_.DisplayName -ieq "$name" }).ShortName } else { $results }
 }
 
 function Get-SpeechToken {
@@ -22,26 +31,25 @@ $script:Token = Get-SpeechToken
 # 2) Define your speaker→voice map in one spot
 # ——————————————————————————————————————————
 $script:VoiceMap = @{
-    Narrator        = 'en-US-AdamMultilingualNeural'
-    CharlieWade     = 'en-US-BrandonMultilingualNeural'
-    ClaireWilson    = 'en-US-JaneNeural'
-    DorisYoung      = 'en-US-AriaNeural'
-    WendellJones    = 'en-US-GuyNeural'
-    LadyWilson      = 'en-US-ElizabethNeural'
-    HaroldWilson    = 'en-US-BrianMultilingualNeural'
-    WendyWilson     = 'en-US-AmberNeural'
-    GeraldWhite     = 'en-US-GuyNeural'
-    KevinWhite      = 'en-US-RyanMultilingualNeural'
-    StephenThompson = 'en-GB-OllieMultilingualNeural'
-    SabrinaLee      = $null
-    IsaacCameron    = $null
-    JaneWolfe       = $null
-    ElaineWilson    = $null
-    JacobWilson     = $null
-    MrsLewis        = $null
-    LordWade        = $null
-    MrJones         = $null
-    CaptainCooper   = $null 
+    Narrator        = Get-SpeechVoices 'Adam Multilingual'
+    CharlieWade     = Get-SpeechVoices 'Brandon Multilingual'
+    ClaireWilson    = Get-SpeechVoices Jane
+    DorisYoung      = Get-SpeechVoices Aria
+    WendellJones    = Get-SpeechVoices Guy
+    LadyWilson      = Get-SpeechVoices Elizabeth
+    HaroldWilson    = Get-SpeechVoices 'Brian Multilingual'
+    WendyWilson     = Get-SpeechVoices Amber
+    GeraldWhite     = Get-SpeechVoices Andrew
+    KevinWhite      = Get-SpeechVoices 'Ryan Multilingual'
+    StephenThompson = Get-SpeechVoices 'Ollie Multilingual'
+    SabrinaLee      = Get-SpeechVoices 'Emma Dragon HD Latest'
+    IsaacCameron    = Get-SpeechVoices Ryan
+    ElaineWilson    = Get-SpeechVoices 'Aria Dragon HD Latest'
+    JacobWilson     = Get-SpeechVoices 'Alloy Dragon HD Latest'
+    MrsLewis        = Get-SpeechVoices 'Ava Dragon HD Latest'
+    LordWade        = Get-SpeechVoices Thomas
+    MrJones         = Get-SpeechVoices Tony
+    CaptainCooper   = Get-SpeechVoices Kai
 }
 
 function Validate-UniqueVoices {
