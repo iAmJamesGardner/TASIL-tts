@@ -33,10 +33,10 @@ $script:Token = Get-SpeechToken
 $script:VoiceMap = @{
     Narrator        = Get-SpeechVoices 'Adam Multilingual'
     CharlieWade     = Get-SpeechVoices 'Brandon Multilingual'
-    ClaireWilson    = Get-SpeechVoices Jane
+    ClaireWilson    = Get-SpeechVoices Sara
     DorisYoung      = Get-SpeechVoices Aria
     WendellJones    = Get-SpeechVoices Guy
-    LadyWilson      = Get-SpeechVoices Elizabeth
+    LadyWilson      = Get-SpeechVoices Nancy
     HaroldWilson    = Get-SpeechVoices 'Brian Multilingual'
     WendyWilson     = Get-SpeechVoices Amber
     GeraldWhite     = Get-SpeechVoices Andrew
@@ -50,6 +50,8 @@ $script:VoiceMap = @{
     LordWade        = Get-SpeechVoices Thomas
     MrJones         = Get-SpeechVoices Tony
     CaptainCooper   = Get-SpeechVoices Kai
+    Nurse           = Get-SpeechVoices Ethan
+    Laird           = Get-SpeechVoices Annette
 }
 
 function Validate-UniqueVoices {
@@ -101,7 +103,7 @@ function Invoke-TTS {
 # ——————————————————————————————————————————
 # 4) Thin wrappers per speaker
 # ——————————————————————————————————————————
-function Narrator {
+function MyNarrator {
     param($Text, $Style, $OutputFile = "TASIL-$script:i.mp3")
     Invoke-TTS -Text $Text `
         -VoiceName $script:VoiceMap['Narrator'] `
@@ -257,6 +259,22 @@ function CaptainCooper {
     param($Text, $Style, $OutputFile = "TASIL-$script:i.mp3")
     Invoke-TTS -Text $Text `
         -VoiceName $script:VoiceMap['CaptainCooper'] `
+        -Style $Style `
+        -OutputFile $OutputFile
+
+}
+function Nurse {
+    param($Text, $Style, $OutputFile = "TASIL-$script:i.mp3")
+    Invoke-TTS -Text $Text `
+        -VoiceName $script:VoiceMap['Nurse'] `
+        -Style $Style `
+        -OutputFile $OutputFile
+
+}
+function Laird {
+    param($Text, $Style, $OutputFile = "TASIL-$script:i.mp3")
+    Invoke-TTS -Text $Text `
+        -VoiceName $script:VoiceMap['Laird'] `
         -Style $Style `
         -OutputFile $OutputFile
 
