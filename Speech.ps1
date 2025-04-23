@@ -32,7 +32,7 @@ $script:Token = Get-SpeechToken
 # ——————————————————————————————————————————
 $script:VoiceMap = @{
     Narrator        = Get-SpeechVoices 'Adam Multilingual'
-    CharlieWade     = Get-SpeechVoices 'Brandon Multilingual'
+    CharlieWade     = Get-SpeechVoices 'Alloy Turbo Multilingual'
     ClaireWilson    = Get-SpeechVoices Jane
     DorisYoung      = Get-SpeechVoices Aria
     WendellJones    = Get-SpeechVoices Guy
