@@ -36,7 +36,7 @@ $script:VoiceMap = @{
     ClaireWilson    = Get-SpeechVoices Jane
     DorisYoung      = Get-SpeechVoices Aria
     WendellJones    = Get-SpeechVoices Guy
-    LadyWilson      = Get-SpeechVoices Elizabeth
+    LadyWilson      = Get-SpeechVoices 'Jenny Dragon HD Latest'
     HaroldWilson    = Get-SpeechVoices 'Brian Multilingual'
     WendyWilson     = Get-SpeechVoices Amber
     GeraldWhite     = Get-SpeechVoices Andrew
@@ -101,7 +101,7 @@ function Invoke-TTS {
 # ——————————————————————————————————————————
 # 4) Thin wrappers per speaker
 # ——————————————————————————————————————————
-function Narrator {
+function MyNarrator {
     param($Text, $Style, $OutputFile = "TASIL-$script:i.mp3")
     Invoke-TTS -Text $Text `
         -VoiceName $script:VoiceMap['Narrator'] `
@@ -257,6 +257,15 @@ function CaptainCooper {
     param($Text, $Style, $OutputFile = "TASIL-$script:i.mp3")
     Invoke-TTS -Text $Text `
         -VoiceName $script:VoiceMap['CaptainCooper'] `
+        -Style $Style `
+        -OutputFile $OutputFile
+
+}
+
+function Bystander {
+    param($Text, $Style, $OutputFile = "TASIL-$script:i.mp3")
+    Invoke-TTS -Text $Text `
+        -VoiceName (Get-SpeechVoices | Where-Object { $_.Locale -match 'en-GB|en-US' } | get-random).ShortName `
         -Style $Style `
         -OutputFile $OutputFile
 
