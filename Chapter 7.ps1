@@ -1,54 +1,28 @@
 & .\Speech.ps1
-MyNarrator "Looking at her parents ridiculing Charlie, Claire sighed in frustration."
-
-ClaireWilson "Dad, Mom, don't blame Charlie for this. It was my idea, I just don't want our family to be looked down on anymore. Haven't we suffered enough all these years?"
-
-ElaineWilson "But still, you can't take on such a task. It's not just you—even if your grandma goes in person, they wouldn't entertain her!"
-
-MyNarrator "Charlie managed a bitter smile as he watched the bickering. He bet that his snobbish in-laws would never believe that he was the real owner of Emgrand Group. At this exact moment, there was a knock on the door."
-
-ElaineWilson "I'm coming… Hey, Wendell! Why are you here?"
-
-MyNarrator "Elaine heaved a distressing sigh as she opened the door and saw a young man donning an Armani suit, very charming and alluring with a Patek Philippe watch on his wrist worth at least four million dollars."
-
-WendellJones "Auntie, I heard about Claire's negotiation with the Emgrand Group, so I'm here to give her some ideas."
-
-ElaineWilson "Wendell, could you help Claire to win Emgrand Group's contract?"
-
-WendellJones "Claire, why didn't you tell me anything about this? This is huge. Anyway, don't worry, my family has some connections with Emgrand Group. I'll speak to my father—let's see how we can help you with this."
-
-ClaireWilson "Wendell, I appreciate your kind offer, but no thanks, I'll find a way myself."
-
-ElaineWilson "Claire, are you crazy? Mr. Jones is kind and generous enough to pay you a visit and help you—how could you say such things?"
-
-CharlieWade "Mr. Jones, I'm curious—how can you help Claire? Emgrand Group is so big and I don't think you're much of an influence to them, right? And now you claim that you have a way to help Claire win the contract?"
-
-WendellJones "What do you know? The Jones family and Emgrand Group have been cooperating partners for years. This time, our family can get at least one-third of their two-billion-dollar project! Until then, I'll ask my father to allocate ten million dollars as a subcontract to Claire. Mission accomplished, isn't it?"
-
-CharlieWade "Wow! I didn't know that the Jones family has such an intimate relationship with Emgrand Group!"
-
-WendellJones "Of course! Everyone in Aurous Hill knows about that! Charlie Wade, let me offer you a piece of advice: a frog in the well like you had better leave Claire now. A hopeless man like you can't bring her happiness—you'll only be her burden."
-
-ClaireWilson "I'm sorry, Mr. Jones, I don't need your help and please watch your mouth!"
-
-WendellJones "Claire, I'm helping you—why are you still taking this loser's side? Why are you so protective of him?"
-
-ClaireWilson "He's not a loser, he's my husband!"
-
-WendellJones "Okay! You asked for it—do as you please! I want to see how you're going to solve this problem! Don't come crying at me for not giving you a chance later on when you fail!"
-
-MyNarrator "WendellJones turned around, slammed the door, and left."
-
-ElaineWilson "You! How dare you! What else can you do besides being Claire's burden? Mr. Jones had kindly lent a hand—but you chased him away!"
-
-CharlieWade "Mom, he's all talk. He can't even win a contract with Emgrand Group, how can he help Claire?"
-
-ElaineWilson "What do you know, you ignorant fool! The Jones family can get one-third of the two-billion-dollar contract!"
-
-MyNarrator "Charlie was expressionless, but deep in his heart he was grinning—he knew that his Emgrand Group would never have any connection with them again."
-
-ClaireWilson "Mom, don't blame Charlie. Just wait until I return from the Emgrand Group!"
-
-ElaineWilson "Huh!"
-
-MyNarrator "Elaine sighed in great dismay, feeling that God was unfair to her. She had married a useless husband, while her daughter had married an even more useless man!"
+Invoke-CharacterTTS MyNarrator "Looking at her parents ridiculing Charlie, Claire sighed in frustration."
+Invoke-CharacterTTS ClaireWilson "Dad, Mom, don't blame Charlie for this. It was my idea, I just don't want our family to be looked down on anymore. Haven't we suffered enough all these years?"
+Invoke-CharacterTTS ElaineWilson "But still, you can't take on such a task. It's not just you—even if your grandma goes in person, they wouldn't entertain her!"
+Invoke-CharacterTTS MyNarrator "Charlie managed a bitter smile as he watched the bickering. He bet that his snobbish in-laws would never believe that he was the real owner of Emgrand Group. At this exact moment, there was a knock on the door."
+Invoke-CharacterTTS ElaineWilson "I'm coming… Hey, Wendell! Why are you here?"
+Invoke-CharacterTTS MyNarrator "Elaine heaved a distressing sigh as she opened the door and saw a young man donning an Armani suit, very charming and alluring with a Patek Philippe watch on his wrist worth at least four million dollars."
+Invoke-CharacterTTS WendellJones "Auntie, I heard about Claire's negotiation with the Emgrand Group, so I'm here to give her some ideas."
+Invoke-CharacterTTS ElaineWilson "Wendell, could you help Claire to win Emgrand Group's contract?"
+Invoke-CharacterTTS WendellJones "Claire, why didn't you tell me anything about this? This is huge. Anyway, don't worry, my family has some connections with Emgrand Group. I'll speak to my father—let's see how we can help you with this."
+Invoke-CharacterTTS ClaireWilson "Wendell, I appreciate your kind offer, but no thanks, I'll find a way myself."
+Invoke-CharacterTTS ElaineWilson "Claire, are you crazy? Mr. Jones is kind and generous enough to pay you a visit and help you—how could you say such things?"
+Invoke-CharacterTTS CharlieWade "Mr. Jones, I'm curious—how can you help Claire? Emgrand Group is so big and I don't think you're much of an influence to them, right? And now you claim that you have a way to help Claire win the contract?"
+Invoke-CharacterTTS WendellJones "What do you know? The Jones family and Emgrand Group have been cooperating partners for years. This time, our family can get at least one-third of their two-billion-dollar project! Until then, I'll ask my father to allocate ten million dollars as a subcontract to Claire. Mission accomplished, isn't it?"
+Invoke-CharacterTTS CharlieWade "Wow! I didn't know that the Jones family has such an intimate relationship with Emgrand Group!"
+Invoke-CharacterTTS WendellJones "Of course! Everyone in Aurous Hill knows about that! Charlie Wade, let me offer you a piece of advice: a frog in the well like you had better leave Claire now. A hopeless man like you can't bring her happiness—you'll only be her burden."
+Invoke-CharacterTTS ClaireWilson "I'm sorry, Mr. Jones, I don't need your help and please watch your mouth!"
+Invoke-CharacterTTS WendellJones "Claire, I'm helping you—why are you still taking this loser's side? Why are you so protective of him?"
+Invoke-CharacterTTS ClaireWilson "He's not a loser, he's my husband!"
+Invoke-CharacterTTS WendellJones "Okay! You asked for it—do as you please! I want to see how you're going to solve this problem! Don't come crying at me for not giving you a chance later on when you fail!"
+Invoke-CharacterTTS MyNarrator "WendellJones turned around, slammed the door, and left."
+Invoke-CharacterTTS ElaineWilson "You! How dare you! What else can you do besides being Claire's burden? Mr. Jones had kindly lent a hand—but you chased him away!"
+Invoke-CharacterTTS CharlieWade "Mom, he's all talk. He can't even win a contract with Emgrand Group, how can he help Claire?"
+Invoke-CharacterTTS ElaineWilson "What do you know, you ignorant fool! The Jones family can get one-third of the two-billion-dollar contract!"
+Invoke-CharacterTTS MyNarrator "Charlie was expressionless, but deep in his heart he was grinning—he knew that his Emgrand Group would never have any connection with them again."
+Invoke-CharacterTTS ClaireWilson "Mom, don't blame Charlie. Just wait until I return from the Emgrand Group!"
+Invoke-CharacterTTS ElaineWilson "Huh!"
+Invoke-CharacterTTS MyNarrator "Elaine sighed in great dismay, feeling that God was unfair to her. She had married a useless husband, while her daughter had married an even more useless man!"
