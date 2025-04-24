@@ -77,7 +77,8 @@ function Invoke-TTS {
         [Parameter(Mandatory)][string]$Text,
         [Parameter(Mandatory)][string]$VoiceName,
         [string]$Style,
-        [string]$OutputFile = "TASIL-$script:i.mp3"
+        [string]$OutputFile = "TASIL-$script:i.mp3",
+        [switch]$Play
     )
     $body =
     if ($Style) { "<mstts:express-as style='$Style'>$Text</mstts:express-as>" }
@@ -97,7 +98,7 @@ function Invoke-TTS {
         -Headers $h -Body $ssml -OutFile $OutputFile
 
     $script:i++
-    Start-Process ".\$OutputFile"
+    if ($Play) { Start-Process "$OutputFile" }
 }
 
 # ——————————————————————————————————————————
@@ -275,6 +276,15 @@ function Laird {
     param($Text, $Style, $OutputFile = "TASIL-$script:i.mp3")
     Invoke-TTS -Text $Text `
         -VoiceName $script:VoiceMap['Laird'] `
+        -Style $Style `
+        -OutputFile $OutputFile
+
+}
+
+function Bystander {
+    param($Text, $Style, $OutputFile = "TASIL-$script:i.mp3")
+    Invoke-TTS -Text $Text `
+        -VoiceName (Get-SpeechVoices | Get-Random).ShortName `
         -Style $Style `
         -OutputFile $OutputFile
 
